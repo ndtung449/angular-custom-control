@@ -1,0 +1,11 @@
+.ac-option {
+  padding: 0.5em;
+}
+
+.ac-option:hover {
+  background-color: lightgray;
+}
+
+.ac-option:focus {
+  background-color: red;
+}

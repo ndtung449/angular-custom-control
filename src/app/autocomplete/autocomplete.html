@@ -1,0 +1,6 @@
+<div class="ac-container">
+  <input type="text" [formControl]="searchControl" class="ac-input" (blur)="onBlur()" (focus)="onFocus()">
+  <div class="panel" [ngClass]="panelVisible ? 'ac-panel-show' : 'ac-panel-hide'">
+    <app-ac-option *ngFor="let option of options" (click)="handleSelect(option)" [value]="option"></app-ac-option>
+  </div>
+</div>

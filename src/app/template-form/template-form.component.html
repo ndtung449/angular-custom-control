@@ -1,0 +1,13 @@
+<h2>Custom control - Template form </h2>
+<form #form="ngForm">
+  <label>Document type: </label>
+  <app-autocomplete
+    name="documentType" 
+    [options]="filteredOptions" 
+    ngModel
+    [allowedValues]="defaultOptions"
+    #ac="ngModel"
+  ></app-autocomplete>
+  <p *ngIf="ac.errors" style="color: red">Value is not valid</p>
+</form>
+<pre>{{ form.value | json }}</pre>

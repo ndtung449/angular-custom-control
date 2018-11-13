@@ -1,0 +1,11 @@
+<h2>Custom control - Reactive form</h2>
+<form [formGroup]="form">
+  <label>Document Type:</label>
+  <app-autocomplete
+    [allowedValues]="documentTypes"
+    [formControl]="form.controls.documentType"
+    [options]="filteredDocumentTypes"
+  ></app-autocomplete>
+  <p *ngIf="form.controls.documentType.errors" style="color: red">Value is not valid</p>
+</form>
+<pre>{{ form.value | json }}</pre>
